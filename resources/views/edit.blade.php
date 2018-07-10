@@ -1,14 +1,9 @@
-<!-- edit.blade.php -->
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Laravel 5.6 CRUD Tutorial With Example </title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-  </head>
-  <body>
+@extends('layouts.app')
+
+@section('content')
     <div class="container">
       <h2>Edit A Form</h2><br  />
+      <a href="{{url('passports')}}" class="btn btn-info"><i class="fas fa-hand-point-left"></i></a>
         <form method="post" action="{{action('PassportController@update', $id)}}">
         @csrf
         <input name="_method" type="hidden" value="PATCH">
@@ -53,5 +48,4 @@
         </div>
       </form>
     </div>
-  </body>
-</html>
+ @endsection

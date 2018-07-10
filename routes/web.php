@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 Route::resource('passports', 'PassportController');
 
-Auth::routes();
+Route::get('passports/create', 'PassportController@create')->name('create');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+
